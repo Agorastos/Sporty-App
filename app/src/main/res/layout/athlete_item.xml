@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.avagar.sporty.room.converters.DateConverters" />
+
+        <variable
+                name="athlete"
+                type="com.avagar.sporty.room.entity.AthleteEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?selectableItemBackground"
+            app:cardUseCompatPadding="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@{athlete.firstName}"
+                    android:textSize="18sp" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@{DateConverters.dateToString(athlete.dateOfBirth)}"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@{Integer.toString(athlete.sportId)}"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

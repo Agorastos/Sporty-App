@@ -1,0 +1,19 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="sport"
+                type="com.avagar.sporty.room.entity.SportEntity" />
+    </data>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@{sport.name}"
+            android:textSize="18sp" />
+
+</layout>

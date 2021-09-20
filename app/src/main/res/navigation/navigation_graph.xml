@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation_graph"
+        app:startDestination="@id/clubsFragment">
+
+    <fragment
+            android:id="@+id/athletesFragment"
+            android:name="com.avagar.sporty.ui.athletes.AthletesFragment"
+            android:label="AthletesFragment"
+            tools:layout="@layout/athletes_fragment">
+        <action
+                android:id="@+id/action_athletesFragment_to_addAthleteFragment"
+                app:destination="@id/addAthleteFragment" />
+        <action
+                android:id="@+id/action_athletesFragment_to_editAthleteFragment"
+                app:destination="@id/editAthleteFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/clubsFragment"
+            android:name="com.avagar.sporty.ui.clubs.ClubsFragment"
+            android:label="ClubsFragment"
+            tools:layout="@layout/clubs_fragment" >
+        <action
+                android:id="@+id/action_clubsFragment_to_addClubFragment"
+                app:destination="@id/addClubFragment" />
+        <action
+                android:id="@+id/action_clubsFragment_to_editClubFragment"
+                app:destination="@id/editClubFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/sportsFragment"
+            android:name="com.avagar.sporty.ui.sports.SportsFragment"
+            android:label="SportsFragment"
+            tools:layout="@layout/sports_fragment">
+        <action
+                android:id="@+id/action_sportsFragment_to_addSportFragment"
+                app:destination="@id/addSportFragment" />
+        <action
+                android:id="@+id/action_sportsFragment_to_editSportFragment"
+                app:destination="@id/editSportFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/matchesFragment"
+            android:name="com.avagar.sporty.ui.matches.MatchesFragment"
+            android:label="MatchesFragment"
+            tools:layout="@layout/matches_fragment" />
+    <fragment
+            android:id="@+id/addSportFragment"
+            android:name="com.avagar.sporty.ui.sports.add.AddSportFragment"
+            android:label="AddSportFragment"
+            tools:layout="@layout/add_sport_fragment" />
+    <fragment
+            android:id="@+id/editSportFragment"
+            android:name="com.avagar.sporty.ui.sports.edit.EditSportFragment"
+            android:label="EditSportFragment"
+            tools:layout="@layout/edit_sport_fragment">
+        <argument
+                android:name="sport"
+                app:argType="com.avagar.sporty.room.entity.SportEntity" />
+        <action
+                android:id="@+id/action_editSportFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addAthleteFragment"
+            android:name="com.avagar.sporty.ui.athletes.add.AddAthleteFragment"
+            android:label="AddAthleteFragment"
+            tools:layout="@layout/add_athlete_fragment" />
+    <fragment
+            android:id="@+id/editAthleteFragment"
+            android:name="com.avagar.sporty.ui.athletes.edit.EditAthleteFragment"
+            android:label="EditAthleteFragment"
+            tools:layout="@layout/edit_athlete_fragment" >
+        <argument
+                android:name="athleteId"
+                app:argType="string" />
+        <action
+                android:id="@+id/action_editAthleteFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addClubFragment"
+            android:name="com.avagar.sporty.ui.clubs.add.AddClubFragment"
+            android:label="AddClubFragment"
+            tools:layout="@layout/add_athlete_fragment"></fragment>
+    <fragment
+            android:id="@+id/editClubFragment"
+            android:name="com.avagar.sporty.ui.clubs.edit.EditClubFragment"
+            android:label="EditClubFragment"
+            tools:layout="@layout/edit_athlete_fragment">
+        <argument
+                android:name="clubId"
+                app:argType="string" />
+        <action
+                android:id="@+id/action_editClubFragment_to_mapFragment"
+                app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.avagar.sporty.ui.map.MapFragment"
+            android:label="MapFragment"
+            tools:layout="@layout/map_fragment" >
+        <argument
+                android:name="place"
+                app:argType="string" />
+    </fragment>
+
+
+</navigation>

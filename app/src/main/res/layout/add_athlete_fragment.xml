@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp"
+                tools:context=".ui.add.AddAthleteFragment">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_athlete_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Athlete's first name"
+                        android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_athlete_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Athlete's last name"
+                        android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_athlete_home_ground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Athlete's home ground"
+                        android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_athlete_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Athlete's country"
+                        android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/athlete_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/athlete_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <Button
+                    android:id="@+id/athlete_date_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_baseline_date_range_24" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/done_athlete_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_baseline_done_24"
+                app:borderWidth="0dp" />
+    </FrameLayout>
+</layout>
